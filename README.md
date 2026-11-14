@@ -2,7 +2,7 @@
 
 Executable scaffold for a conformant **maturity-model repository** in the [Assessment-Models](https://github.com/Assessment-Models) organization.
 
-> **Implementation, not authority.** The normative source of truth is [maturity-model-standard](https://github.com/Assessment-Models/maturity-model-standard) (AM-MODEL-REPOSITORY-STANDARD v1.0.0, established by CR-AM-ORG-RES-000). If this template ever disagrees with the standard, the standard wins and a template issue is filed.
+> **Implementation, not authority.** The normative source of truth is [maturity-model-standard](https://github.com/Assessment-Models/maturity-model-standard) (AM-MODEL-REPOSITORY-STANDARD v1.0.1, established by CR-AM-ORG-RES-000). If this template ever disagrees with the standard, the standard wins and a template issue is filed.
 
 ## Status
 

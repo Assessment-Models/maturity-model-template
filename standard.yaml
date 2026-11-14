@@ -4,7 +4,9 @@
 # repository standard (AM-MODEL-REPOSITORY-STANDARD). This template ships at
 # conformance level `registered`; raise the level deliberately as structure and
 # validation are completed. `structural` and `full` require more paths — see
-# maturity-model-standard/specifications/repository-standard.md.
+# maturity-model-standard/specifications/repository-standard.md. Established
+# alternative paths for a structural role may be recorded via structure
+# mappings (v1.0.1, repository-standard.md §6).
 #
 # model.yaml remains the authoritative identity manifest; CI cross-checks
 # standard.yaml against model.yaml, VERSION and the README status line.
@@ -12,7 +14,7 @@ repository:
   type: maturity-model
 standard:
   id: AM-MODEL-REPOSITORY-STANDARD
-  version: "1.0.0"
+  version: "1.0.1"
   conformance: registered
 model:
   id: maturity-model-template
