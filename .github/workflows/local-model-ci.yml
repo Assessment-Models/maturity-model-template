@@ -1,0 +1,24 @@
+# Level 1 — Repository validation (CR-AM-11 Level 1 + CR-AM-ORG-RES-000
+# declaration checks). Extend with model-specific structural checks as the
+# model grows; do not remove the declaration validation.
+name: Local model CI (Level 1)
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  repository-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PyYAML
+        run: pip install pyyaml
+      - name: Validate declaration and structure
+        run: python scripts/local_validate.py --root .
+      # TODO: add model-specific Level 1 checks here (examples validity,
+      # identifier stability, reference integrity) as the model matures.

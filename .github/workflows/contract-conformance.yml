@@ -1,0 +1,21 @@
+# Level 2 — Contract conformance against the canonical assessment metamodel
+# (CR-AM-11). Reuses the organization's shared workflow from assessment-ci;
+# do not re-implement contract validation locally.
+#
+# NOTE: dea-metamodel-ref below is pinned to the immutable reference used by
+# the reference implementation at the time this template was published.
+# RE-PIN IT to the current immutable reference when you create a repository
+# from this template.
+name: Contract conformance (Level 2)
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  contract-conformance:
+    uses: Assessment-Models/assessment-ci/.github/workflows/contract-conformance.yml@main
+    with:
+      # Re-pin at repository creation time (see the note above).
+      dea-metamodel-ref: 1bbc08d08587931ea0b4fb9d1ee5cf00bd5852f0

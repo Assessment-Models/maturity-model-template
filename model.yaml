@@ -1,0 +1,34 @@
+# model.yaml — AUTHORITATIVE identity manifest (CR-AM-11 §15 contract handshake).
+#
+# This is the template's own manifest, kept self-consistent so the template's CI
+# passes. When you create a model from this template, replace every value below.
+# `standard.yaml` and the README status line must always agree with `version`.
+id: maturity-model-template
+type: maturity-model
+name: Maturity Model Repository Template
+description: Scaffold for a conformant Assessment-Models maturity-model repository (AM-MODEL-REPOSITORY-STANDARD
+  v1.0.0, CR-AM-ORG-RES-000). Replace this description with the model's own.
+version: 0.1.0
+# Contract handshake — do not change the shape; keep the canonical source.
+conformance:
+  contract:
+    id: maturity-scale-contract
+  source:
+    organization: technehub-labs
+    repository: dea-metamodel
+  version: '1.0'
+# Canonical dependencies — bind published versions; never mint competing constructs.
+dependencies:
+- id: dea-maturity-bands-v2
+  reference: v1.0.0
+compatibility:
+  metamodel:
+    minimum: 1.0.0
+    maximum: <2.0.0
+  contracts:
+  - id: maturity-scale-contract
+    version: ^1.0
+  - id: maturity-model-contract
+    version: ^1.0
+  - id: conformance-contract
+    version: ^1.0

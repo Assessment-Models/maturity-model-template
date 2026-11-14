@@ -1,0 +1,20 @@
+# CR-AM-ORG-RES-000 repository-standard declaration — TEMPLATE.
+#
+# Declares this repository's adoption of the Assessment-Models maturity-model
+# repository standard (AM-MODEL-REPOSITORY-STANDARD). This template ships at
+# conformance level `registered`; raise the level deliberately as structure and
+# validation are completed. `structural` and `full` require more paths — see
+# maturity-model-standard/specifications/repository-standard.md.
+#
+# model.yaml remains the authoritative identity manifest; CI cross-checks
+# standard.yaml against model.yaml, VERSION and the README status line.
+repository:
+  type: maturity-model
+standard:
+  id: AM-MODEL-REPOSITORY-STANDARD
+  version: "1.0.0"
+  conformance: registered
+model:
+  id: maturity-model-template
+  name: Maturity Model Repository Template
+  version: "0.1.0"

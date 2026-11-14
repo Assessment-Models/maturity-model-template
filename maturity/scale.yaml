@@ -1,0 +1,23 @@
+# Maturity scale — TEMPLATE.
+#
+# The model MUST bind a canonical scale published by technehub-labs/dea-metamodel.
+# It MUST NOT mint a competing scale or duplicate canonical content where a
+# versioned dependency is appropriate (CR-AM-ORG-RES-000; canonical scale
+# contract). Replace the binding below with the real canonical scale id/version
+# your model uses, and keep model.yaml's dependency entry in sync.
+id: dea:maturity-bands-v2
+version: 1.0.0
+name: DEA Maturity Bands v2
+description: Canonical maturity bands binding. Replace this file's id/version/name
+  with the canonical scale your model binds (for example a 5-level scale sourced
+  from technehub-labs/dea-metamodel), and record why in docs/provenance.md.
+status: placeholder
+binding:
+  source:
+    organization: technehub-labs
+    repository: dea-metamodel
+  reference: TODO canonical path (e.g. assessment-models/maturity/scale-examples/...)
+  note: >-
+    This repository binds the canonical scale id and version rather than
+    minting a competing one. Model-specific level names may be carried as
+    additive metadata on the model register, never as a second level ladder.

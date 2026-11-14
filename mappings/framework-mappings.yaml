@@ -1,0 +1,25 @@
+# Framework mappings — TEMPLATE.
+#
+# Explicit mappings to source frameworks, legacy model versions or external
+# reference frameworks (metadata standard §provenance; enrichment framework G).
+# Every inherited construct must be distinguishable from adaptations and
+# original contributions. Verify redistribution and licensing conditions before
+# incorporating third-party material.
+model:
+  id: maturity-model-{domain}
+  version: 0.1.0
+sources:
+- id: TODO source framework
+  url: TODO
+  license: TODO
+  usage: inherited | adapted-from | referenced-only
+  note: TODO what was taken, what was changed, and why
+external_frameworks:
+- id: TODO external framework (e.g. CMMI, ISO standard, industry reference model)
+  mapping:
+  - local: dim-{001}
+    external: TODO external construct id/name
+    relationship: equivalent | partial | extends | narrower-than
+legacy:
+- id: TODO legacy model version
+  note: TODO how legacy constructs map to the current model definition

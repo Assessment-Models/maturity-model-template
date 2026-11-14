@@ -1,0 +1,34 @@
+# Example — TEMPLATE.
+#
+# Every conformant repository MUST provide at least one valid, reproducible
+# example demonstrating how the model is interpreted and applied, consistent
+# with the authoritative model definition and scoring rules (documentation
+# standard §worked examples). Replace this skeleton with a real worked example.
+#
+# For assessment executions and results: assessment implementations record the
+# model id and the IMMUTABLE model version used for the assessment, enabling
+# reproducibility and historical comparison.
+model:
+  id: maturity-model-{domain}
+  version: 0.1.0
+scenario:
+  name: TODO scenario title
+  description: TODO the assessed scope and organizational context
+assessed_criteria:
+- criterion_id: cri-{001}-01
+  evidence:
+  - id: ev-{001}
+    description: TODO what the evidence is
+    type: TODO document|observation|record|artifact
+    source: TODO where the evidence comes from
+    sufficiency: TODO why this is sufficient for the criterion
+  score: TODO
+  rationale: TODO the assessor's interpretation, kept distinct from the evidence itself
+aggregation:
+  dimension_scores: TODO
+  model_score: TODO
+  maturity_level: TODO
+notes: |-
+  The example must reproduce the scoring calculation exactly as defined in
+  maturity/model/{domain}.yaml (scoring block). Where evidence is incomplete,
+  show the missing-evidence treatment rather than silently adjusting.

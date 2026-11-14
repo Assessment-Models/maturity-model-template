@@ -1,0 +1,41 @@
+# Model definition — TEMPLATE SKELETON (maturity/model/{domain}.yaml)
+#
+# This file is the AUTHORITATIVE domain model definition placeholder. The real
+# model defines its own dimensions, criteria and level characteristics; it
+# MUST NOT inherit another model's dimensions merely because both use this
+# scaffold (AP-01: common structure, independent semantics).
+#
+# Requirements (AM-MODEL-REPOSITORY-STANDARD, metadata/documentation standards):
+# - every element has a stable id, unique within the model
+# - ids are never substitutes for human-readable names
+# - scoring semantics are explicit: ranges, weighting, aggregation,
+#   missing-evidence and not-applicable treatment, rounding, level determination
+# - evidence is distinguishable from an assessor's interpretation of evidence
+# - the definition is consistent with the bound scale in maturity/scale.yaml
+id: maturity-model-{domain}
+version: 0.1.0
+metamodel_version: 1.0.0
+scale:
+  # bind the id/version declared in maturity/scale.yaml — one scale, one ladder
+  id: TODO-bind-from-scale-yaml
+  version: TODO
+dimensions:
+- id: dim-{001}
+  name: TODO dimension name
+  definition: TODO what this dimension assesses and why it exists
+  assessment_intent: TODO the judgement the dimension supports
+  criteria:
+  - id: cri-{001}-01
+    name: TODO criterion name
+    definition: TODO observable capability or practice this criterion evaluates
+    evidence_expectations:
+    - TODO what evidence demonstrates this criterion
+scoring:
+  # The model MUST make these explicit (repository standard §scoring):
+  range: [0, 4]
+  weighting: TODO | none | explicit
+  aggregation: TODO how criterion scores aggregate to dimension and model scores
+  missing_evidence: TODO treatment
+  not_applicable: TODO treatment
+  rounding: TODO
+  level_determination: TODO rule mapping a score to a maturity level
