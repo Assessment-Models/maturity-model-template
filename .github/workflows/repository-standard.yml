@@ -11,4 +11,4 @@ on:
 
 jobs:
   repository-standard:
-    uses: Assessment-Models/maturity-model-standard/.github/workflows/repository-conformance.yml@main
+    uses: Assessment-Models/maturity-model-standard/.github/workflows/repository-conformance.yml@aaf48bfbfd694110cf72ec0ca5ce27db7dc76dd1
