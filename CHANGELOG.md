@@ -4,6 +4,11 @@
 
 ### Changed
 
+- Pin reusable assessment-ci and maturity-model-standard workflows to immutable commit SHAs; explicitly pin the nested assessment-ci validator source in the Level 2 workflow.
+- Clarify immutable workflow pinning as a repository-creation requirement.
+
+### Changed
+
 - Align scale guidance with CR-AM-ORG-RES-000 and AP-01: models may define and version their own maturity scale or explicitly bind a published canonical scale.
 - Replace the mandatory canonical-scale placeholder with a model-owned scale declaration and an optional immutable canonical binding pattern.
 - Clarify that the shared maturity-scale contract does not mandate adoption of one canonical maturity ladder.
