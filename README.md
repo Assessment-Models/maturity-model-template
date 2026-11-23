@@ -14,18 +14,24 @@ Executable scaffold for a conformant **maturity-model repository** in the [Asses
 
 1. Create your repository from this template and rename it `maturity-model-{domain}`.
 2. Work through the checklist below, replacing every `TODO` and every placeholder between `{}` braces.
-3. Keep `model.yaml` as the authoritative identity manifest (CR-AM-11 §15 contract handshake) — `standard.yaml` cross-references it, it never replaces it.
-4. Never mint a competing maturity scale: bind the canonical scale from [`technehub-labs/dea-metamodel`](https://github.com/technehub-labs/dea-metamodel) in `maturity/scale.yaml`.
-5. Raise your `standard.yaml` conformance level deliberately (`registered` → `structural` → `full`) as structure and validation are completed, and record adoption in the [portfolio conformance registry](https://github.com/Assessment-Models/maturity-model-standard/blob/main/registry/conformance.yaml).
+3. Keep `model.yaml` as the authoritative identity manifest (CR-AM-11 §15 contract handshake). `standard.yaml` declares repository-standard adoption; it does not replace the manifest.
+4. Define the model's maturity scale in `maturity/scale.yaml`. You may either:
+   - define and version a model-owned scale; or
+   - explicitly bind a published canonical scale by identifier, version and immutable source reference.
+   
+   The organization standard requires explicit, governed scale semantics. It does **not** require every model to adopt the same scale.
+5. Document the scale's level identifiers, ordering, meanings, progression rules and any non-maturity states. Keep scoring and aggregation rules explicit in the authoritative model definition.
+6. Raise your `standard.yaml` conformance level deliberately (`registered` → `structural` → `full`) as structure and validation are completed, and record adoption in the [portfolio conformance registry](https://github.com/Assessment-Models/maturity-model-standard/blob/main/registry/conformance.yaml).
 
 ## Checklist for a new model repository
 
 - [ ] Rename the repository to `maturity-model-{domain}`.
-- [ ] `model.yaml` — real identity, description, version, contract handshake, dependencies, compatibility.
+- [ ] `model.yaml` — real identity, description, version, contract handshake, actual dependencies and compatibility.
 - [ ] `standard.yaml` — real model id/name/version matching `model.yaml` and `VERSION`.
 - [ ] `VERSION`, `README.md` status line and `model.yaml` version all agree (CI enforces this).
-- [ ] `maturity/scale.yaml` — bind the canonical scale id/version; do not mint a new one.
-- [ ] `maturity/model/{domain}.yaml` — authoritative model definition: dimensions, criteria, levels, scoring rules.
+- [ ] `maturity/scale.yaml` — declare whether the scale is model-owned or a canonical-scale binding; identify and version the scale and document its semantics.
+- [ ] `maturity/model/{domain}.yaml` — authoritative model definition: dimensions, criteria, level application, scoring rules and aggregation.
+- [ ] `docs/maturity-levels.md` — explain every level and any separate states; align with the declared scale.
 - [ ] `examples/` — at least one reproducible example consistent with the model definition.
 - [ ] `docs/` — fill the required documents; wire `docs/diagrams/` (DGM-01..04 required at `full`).
 - [ ] `mappings/framework-mappings.yaml` — provenance and external-framework mappings.
@@ -44,7 +50,11 @@ Executable scaffold for a conformant **maturity-model repository** in the [Asses
 
 ## Standardize the architecture, never the model's content
 
-Your model keeps its own dimensions, criteria, scale, scoring and evidence semantics (AP-01). A Technology model must not inherit Autonomous Operations dimensions merely because both use this scaffold. Canonical semantics live in [`technehub-labs/dea-metamodel`](https://github.com/technehub-labs/dea-metamodel); this template governs repository shape only.
+The organization standard establishes **common structure with independent semantics** (AP-01). Each model owns its dimensions, criteria, maturity scale, scoring method, aggregation rules and evidence semantics.
+
+A model may adopt a published canonical scale where that is appropriate. If it does, bind the exact scale identifier and version to an immutable source reference. A model may instead define its own scale; in that case, document its identifiers, ordering, level meanings, progression semantics and provenance in the model repository. Neither choice is a departure from the organization standard.
+
+Do not conflate a shared scale contract or metamodel dependency with adoption of one particular maturity ladder. Shared contracts support consistent representation and validation; they do not make model-specific scales identical. A model-specific scoring measure or supplementary index is likewise owned by that model unless separately adopted through an organization-level decision.
 
 ## Licence
 
