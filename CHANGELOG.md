@@ -1,5 +1,14 @@
 # Changelog — maturity-model-template
 
+## Unreleased
+
+### Changed
+
+- Align scale guidance with CR-AM-ORG-RES-000 and AP-01: models may define and version their own maturity scale or explicitly bind a published canonical scale.
+- Replace the mandatory canonical-scale placeholder with a model-owned scale declaration and an optional immutable canonical binding pattern.
+- Clarify that the shared maturity-scale contract does not mandate adoption of one canonical maturity ladder.
+- Remove the template's implicit direct dependency on the DEA maturity-bands-v2 scale.
+
 ## 0.1.0 — 2026-11-14
 
 Initial scaffold under CR-AM-ORG-RES-000, implementing AM-MODEL-REPOSITORY-STANDARD v1.0.0.
