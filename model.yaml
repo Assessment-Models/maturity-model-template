@@ -7,9 +7,10 @@ id: maturity-model-template
 type: maturity-model
 name: Maturity Model Repository Template
 description: Scaffold for a conformant Assessment-Models maturity-model repository (AM-MODEL-REPOSITORY-STANDARD
-  v1.0.0, CR-AM-ORG-RES-000). Replace this description with the model's own.
+  v1.0.1, CR-AM-ORG-RES-000). Replace this description with the model's own.
 version: 0.1.0
-# Contract handshake — do not change the shape; keep the canonical source.
+# Contract handshake — retain the required contract declaration and update its
+# source/version only through the governed contract compatibility process.
 conformance:
   contract:
     id: maturity-scale-contract
@@ -17,10 +18,10 @@ conformance:
     organization: technehub-labs
     repository: dea-metamodel
   version: '1.0'
-# Canonical dependencies — bind published versions; never mint competing constructs.
-dependencies:
-- id: dea-maturity-bands-v2
-  reference: v1.0.0
+# Declare only dependencies the model actually adopts. A dependency on the
+# shared maturity-scale contract does not require adoption of one canonical
+# maturity ladder. Record the chosen scale governance in maturity/scale.yaml.
+dependencies: []
 compatibility:
   metamodel:
     minimum: 1.0.0
