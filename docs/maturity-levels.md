@@ -1,15 +1,19 @@
 # Maturity levels — TEMPLATE
 
-Replace with the model's complete level explanations, consistent with the bound scale in `maturity/scale.yaml` (one scale, one ladder — model-specific stage names are additive metadata, never a second ladder).
+Replace this document with the model's complete explanation of its maturity scale, as declared in `maturity/scale.yaml`.
 
-Each level explains, using consistent aspects:
+The organization standard does not prescribe a universal number of levels, identifier format, names, ordering convention or progression model. Each model owns and versions these semantics. A model may define its own scale or bind a published canonical scale; state which approach is used and identify the exact version.
+
+For every maturity level, explain:
 
 - Level identifier and name.
-- Definition.
-- Characteristics.
-- Observable behaviours.
-- Expected capabilities.
+- Definition and intended scope.
+- Characteristics and observable behaviours.
+- Expected capabilities or outcomes, where relevant.
 - Evidence expectations.
-- Entry/exit conditions, where applicable.
+- Entry, exit and progression conditions.
+- Scoring or aggregation implications, where applicable.
 
-The standard does not prescribe the number of levels or their names. This document must not drift from the scale binding; where they disagree, the scale wins.
+Also explain any state that is not itself a maturity level (for example, `Not Assessed`, `Not Applicable` or `Insufficient Evidence`). Such states must not be presented as points on the maturity progression unless the model explicitly defines them as maturity levels.
+
+The scale declaration is authoritative for scale identity and ordering. This document explains the semantics for readers; it must remain consistent with `maturity/scale.yaml` and the authoritative model definition. Numerical scores, supplementary indices and maturity-level determinations must be distinguished and their relationship documented.

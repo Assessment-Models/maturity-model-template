@@ -1,23 +1,48 @@
 # Maturity scale — TEMPLATE.
 #
-# The model MUST bind a canonical scale published by technehub-labs/dea-metamodel.
-# It MUST NOT mint a competing scale or duplicate canonical content where a
-# versioned dependency is appropriate (CR-AM-ORG-RES-000; canonical scale
-# contract). Replace the binding below with the real canonical scale id/version
-# your model uses, and keep model.yaml's dependency entry in sync.
-id: dea:maturity-bands-v2
+# Choose exactly one governance mode:
+#   model-defined: this repository owns and versions the scale semantics.
+#   canonical:     this repository binds a published scale without redefining it.
+#
+# This file declares scale identity and governance. The model definition and
+# docs/maturity-levels.md explain how the scale is applied by this model.
+# The organization standard does not mandate a shared maturity ladder.
+
+id: TODO-model-scale-id
 version: 1.0.0
-name: DEA Maturity Bands v2
-description: Canonical maturity bands binding. Replace this file's id/version/name
-  with the canonical scale your model binds (for example a 5-level scale sourced
-  from technehub-labs/dea-metamodel), and record why in docs/provenance.md.
-status: placeholder
-binding:
-  source:
-    organization: technehub-labs
-    repository: dea-metamodel
-  reference: TODO canonical path (e.g. assessment-models/maturity/scale-examples/...)
-  note: >-
-    This repository binds the canonical scale id and version rather than
-    minting a competing one. Model-specific level names may be carried as
-    additive metadata on the model register, never as a second level ladder.
+name: TODO model scale name
+description: >-
+  Describe the purpose and scope of this scale. Replace all TODO values and
+  retain only the governance block appropriate to the selected mode.
+governance:
+  mode: model-defined # model-defined | canonical
+
+# For mode=model-defined, define the scale's ordered levels here. Use identifiers
+# and names appropriate to the model; no universal number of levels or naming
+# convention is imposed. Define separate states (for example, not assessed) only
+# when their semantics are distinct from maturity progression.
+definition:
+  levels:
+    - id: TODO-level-identifier
+      name: TODO level name
+      order: 1
+      description: TODO what this level means in this model
+  progression:
+    rule: TODO explain how progression between levels is determined
+  separate_states: []
+
+# For mode=canonical, remove the definition block above and provide a binding:
+# binding:
+#   source:
+#     organization: TODO
+#     repository: TODO
+#     reference: TODO immutable tag or commit
+#     path: TODO path to the published scale definition
+#   scale:
+#     id: TODO canonical scale identifier
+#     version: TODO canonical scale version
+#   adaptation: none # none | metadata-only; explain any permitted local mapping
+#
+# A canonical binding must not silently redefine the source scale. If local
+# assessment criteria, scoring, or interpretation differ, document those as
+# model-specific semantics in the model definition and provenance record.
