@@ -35,11 +35,13 @@ Executable scaffold for a conformant **maturity-model repository** in the [Asses
 - [ ] `examples/` — at least one reproducible example consistent with the model definition.
 - [ ] `docs/` — fill the required documents; wire `docs/diagrams/` (DGM-01..04 required at `full`).
 - [ ] `mappings/framework-mappings.yaml` — provenance and external-framework mappings.
-- [ ] `.github/workflows/contract-conformance.yml` — re-pin `dea-metamodel-ref` to the current immutable reference at creation time.
+- [ ] `.github/workflows/contract-conformance.yml` — pin the reusable `assessment-ci` workflow and its `assessment-ci-ref` to immutable commit SHAs; re-pin `dea-metamodel-ref` to the intended immutable contract-suite reference.
 - [ ] Registry record in [`assessment-registry`](https://github.com/Assessment-Models/assessment-registry) (Level 3 ecosystem validation).
 - [ ] Adoption entry in the [portfolio conformance registry](https://github.com/Assessment-Models/maturity-model-standard/blob/main/registry/conformance.yaml).
 
 ## CI levels (all additive; none replaces another)
+
+Reusable workflows must be referenced by immutable commit SHA, not `main`, `master`, or a moving version tag. Keep the nested validator source (`assessment-ci-ref`) immutable as well. The pins in this template are known-good reference points at publication time; review and update them deliberately when creating a repository.
 
 | Level | Workflow | Validates |
 |---|---|---|
